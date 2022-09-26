@@ -1,0 +1,1253 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    align-items: center;
+    font-size: 12pt;
+    color: black;
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+input{
+    border: none;
+    border-bottom: solid 1px #ccc;
+    text-align: center;
+}
+
+.show {
+    box-sizing: border-box;
+    width: 100%;
+    height: 1200px;
+    background-color: #20B2AA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro {
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    margin-right: 5%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+/*///////////////////////////////////////////////////////////////////////////*/
+/*LOGIN*/
+form#login {
+    position: relative;
+    top: -400px;
+    background-color: white;
+    border-radius: 20px;
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+.login div {
+    margin: 5px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.login div input {
+    margin: 5px;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    border: 0;
+    border-bottom: solid 1px #ccc;
+}
+
+.login div label {
+    margin: 5px;
+}
+
+.headers {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    background-color: white;
+    box-shadow: 0 2px #ccc;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+}
+
+.head {
+    font: normal 20pt sans-serif;
+    padding-left: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.links {
+    font: normal 10pt sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    text-align: center;
+    position: relative;
+    top: -400px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*CADASTRA*/
+
+.fundoCadastro {
+    background: white;
+    width: 100%;
+    height: 750px;
+    position: relative;
+    top: 0;
+    left: 200px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 0 20px 20px;
+}
+
+form#cadastra {
+    width: 700px;
+    height: fit-content;
+    margin-top: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 20px;
+    position: relative;
+    left: -200px;
+    border-radius: 20px;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+}
+
+
+.info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info input {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    border: 0;
+    border-bottom: solid 1px #ccc;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.afterInfo {
+    width: 100%;
+    display: none;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.afterInfo input {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    border: 0;
+    border-bottom: solid 1px #ccc;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.divHidden div,
+.divHidden2 div {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    border: 0;
+    border-bottom: solid 1px #ccc;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.divHidden,
+.divHidden2 {
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.size0 {
+    width: 90%;
+}
+
+.size1 {
+    width: 50%;
+}
+
+.size2 {
+    width: 20%;
+}
+
+.size3 {
+    width: 30%;
+}
+
+.size4 {
+    width: 60%;
+}
+
+.size5 {
+    width: 10%;
+}
+
+.nascimento {
+    display: flex;
+    flex-direction: row;
+}
+
+
+input#go {
+    width: 200px;
+    height: 50px;
+    font-size: 12pt;
+    border-radius: 15px;
+    background-color: #20B2AA;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    border: 0;
+    transition: ease 0.5s;
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.sucess {
+    display: block;
+    background-color: #61b36e;
+    border: solid 3px green;
+    width: 400px;
+    white-space: normal;
+    padding: 10px;
+    text-align: left;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.erros {
+    display: block;
+    background-color: #d16e6e;
+    border: solid 3px red;
+    width: 400px;
+    padding: 10px;
+    text-align: left;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.erroSenha {
+    text-align: left;
+    color: #ccc;
+    font-size: 8pt;
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*HOME*/
+
+.infoHome {
+    position: relative;
+    top: 0;
+    left: 200px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 10px 0 0 50px;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*MENU*/
+
+.conteudo {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+.menuGlobal {
+    position: fixed;
+    width: 50px;
+    height: 100%;
+    background-color: #20B2AA;
+    box-sizing: initial;
+    transition: width ease 0.5s;
+    overflow-x: hidden;
+}
+
+.menuGlobal.active {
+    width: 200px;
+}
+
+.menuGlobal ul {
+    position: absolute;
+    top: -10px;
+    left: -40px;
+    width: 100%;
+}
+
+.menuGlobal ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.menuGlobal ul li.active {
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+}
+
+
+.menuGlobal ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+
+.menuGlobal ul li.active a .title,
+.menuGlobal ul li.active a .icons {
+    color: #20B2AA;
+}
+
+.menuGlobal ul li b:nth-child(1) {
+    position: absolute;
+    top: -10px;
+    height: 10px;
+    width: 100%;
+    background: white;
+    display: none;
+}
+
+.menuGlobal ul li b:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-bottom-right-radius: 10px;
+    background: #20B2AA;
+}
+
+.menuGlobal ul li b:nth-child(2) {
+    position: absolute;
+    bottom: -10px;
+    height: 10px;
+    width: 100%;
+    background: white;
+    display: none;
+}
+
+.menuGlobal ul li b:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 10px;
+    background: #20B2AA;
+}
+
+.menuGlobal ul li.active b:nth-child(1),
+.menuGlobal ul li.active b:nth-child(2) {
+    display: block;
+}
+
+.icons {
+    position: relative;
+    display: block;
+    min-width: 50px;
+    font-size: 20pt;
+    width: 30%;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+}
+
+.title {
+    position: relative;
+    display: block;
+    line-height: 50px;
+    white-space: nowrap;
+    font-size: 13pt;
+    text-align: center;
+    color: white;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*LANÇAMENTOS*/
+
+.grupoLan {
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.infoLanGeral {
+    position: relative;
+    top: 0;
+    left: 200px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 10px 0 0 50px;
+}
+
+/*TABELAS LANÇAMENTO*/
+
+.tabelaLancamento {
+    position: relative;
+    top: 0;
+    left: 0;
+    min-width: 600px;
+    height: 250px;
+    text-align: center;
+    justify-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+}
+
+
+div#tituloLancamento {
+    font-size: 18pt;
+    color: white;
+    background-color: #20B2AA;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cabecalho {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 10px 0;
+    border-bottom: solid 1px #20B2AA;
+    justify-content: normal;
+}
+
+.cabecalho div {
+    width: 200px;
+    font-size: 18pt;
+}
+
+
+.tabelaLancamento table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.infoLancamento {
+    display: block;
+    overflow-x: hidden;
+    font-size: 10pt;
+    height: 100px;
+    border-collapse: collapse;
+}
+
+.infoLancamento td {
+    width: 200px;
+    border-bottom: solid 1px #20B2AA;
+}
+
+.lancamento {
+    box-sizing: border-box;
+    position: relative;
+    margin-left: 50px;
+    padding: 20px;
+    width: auto;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+}
+
+input#addCodigo {
+    width: 50px;
+}
+
+/*BUSCA LANÇAMENTO*/
+
+.buscaLancamento {
+    width: 200px;
+    position: relative;
+    border: transparent;
+    border-bottom: solid 2px #20B2AA;
+}
+
+.buscaLancamento:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+
+
+.adiciona {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dadosAdd {
+    width: 900px;
+    text-align: justify;
+    color: black;
+    font: normal bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.dadosAdd div {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/*INPUTS LANÇAMENTOS*/
+.tips {
+    font-size: 8pt;
+    color: #A9A9A9;
+    position: relative;
+    top: -5px;
+    left: 800px;
+}
+
+input#matriculaReq {
+    width: 40px;
+    margin-right: 200px;
+}
+
+input#nameReq {
+    width: 500px;
+}
+
+input#nfe {
+    width: 60px;
+}
+
+input#anoNfe {
+    width: 80px;
+}
+
+input#addFornecedor {
+    width: 300px;
+}
+
+input#addCnpj {
+    width: 200px;
+}
+
+.cabecalhoNfeLan{
+    margin-bottom: 20px !important;
+}
+
+input#itemLan{
+    width: 40px;
+    margin-right: 810px;
+}
+
+input#addCodigo {
+    width: 40px;
+}
+
+input#addProduto {
+    width: 250px;
+}
+
+input#addUm{
+    width: 40px;
+}
+
+input#addQtd{
+    width: 40px;  
+}
+
+input#addValor{
+    width: 40px;
+}
+
+.spaceItens {
+    width: 900px;
+    height: 2px;
+    background: black;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.btnLanca {
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background: #20B2AA;
+    transition: ease 0.5s;
+}
+
+.btnLanca:hover {
+    background: #2ec0b9;
+}
+
+.btnAddItem {
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background: #20B2AA;
+    transition: ease 0.5s;
+}
+
+.btnAddItem:hover {
+    background: #2ec0b9;
+}
+
+.btnRmvItem {
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background: #20B2AA;
+    transition: ease 0.5s;
+}
+
+.btnRmvItem:hover {
+    background: #2ec0b9;
+}
+
+.btnClear {
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background: #20B2AA;
+    transition: ease 0.5s;
+}
+
+.btnClear:hover {
+    background: #2ec0b9;
+}
+
+div#button {
+    margin-top: 20px;
+}
+
+.insertPDF {
+    margin-top: 20px;
+}
+
+
+
+.hide {
+    width: 150px;
+    padding: 10px;
+    background: #2ec0b9;
+    cursor: pointer;
+    display: none;
+    transition: ease 0.5s;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+}
+
+.hide a {
+    text-decoration: none;
+    color: black;
+}
+
+.hide:hover {
+    background: #20B2AA;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////*/
+/*ADICIONA ITEM*/
+
+.infoAddItemGeral {
+    position: relative;
+    top: 0;
+    left: 200px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 10px 0 0 50px;
+}
+
+.grupoAddItem {
+    width: 550px;
+    height: auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+}
+
+.grupoAddItem h3 {
+    text-align: left;
+}
+
+.grupoAddItem form div {
+    text-align: left;
+    width: 100%;
+}
+
+input#addItemIn {
+    width: 240px;
+    margin-bottom: 10px;
+}
+
+input#addItemUm {
+    width: 175px;
+    margin-bottom: 10px;
+}
+
+.btnAdd {
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background: #20B2AA;
+    transition: ease 0.5s;
+}
+
+.btnAdd:hover {
+    background: #2ec0b9;
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*REQUISIÇÃO*/
+
+.infoReqGeral {
+    position: relative;
+    top: 0;
+    left: 200px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 10px 0 0 50px;
+}
+
+.grupoReq {
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.dadosReq {
+    width: 900px;
+    text-align: justify;
+    color: black;
+    font: normal bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.dadosReq div {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.tabelaReq {
+    position: relative;
+    top: 0;
+    left: 0;
+    min-width: 600px;
+    height: 250px;
+    text-align: center;
+    justify-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+}
+
+
+div#tituloReq {
+    font-size: 18pt;
+    color: white;
+    background-color: #20B2AA;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cabecalhoReq {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 10px 0;
+    border-bottom: solid 1px #20B2AA;
+    justify-content: normal;
+}
+
+.cabecalhoReq div {
+    width: 200px;
+    font-size: 15pt;
+}
+
+
+.tabelaReq table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.infoReq {
+    display: block;
+    overflow-x: hidden;
+    font-size: 10pt;
+    height: 100px;
+    border-collapse: collapse;
+}
+
+.infoReq td {
+    width: 200px;
+    border-bottom: solid 1px #20B2AA;
+}
+
+.requisicao {
+    position: relative;
+    margin-left: 50px;
+    width: 900px;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+}
+
+input#justificativaReq{
+    width: 800px;
+    margin-bottom: 20px;
+}
+
+input#itemReq{
+    width: 40px;
+}
+
+input#addCodigoReq{
+    width: 40px;
+}
+
+input#addProdutoReq{
+    width: 300px;
+}
+
+input#addQtdReq{
+    width: 40px;
+}
+
+input#addUmReq{
+    width: 40px;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*ATENDIMENTO*/
+
+.infoAtdGeral {
+    position: relative;
+    top: 0;
+    left: 200px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 10px 0 0 50px;
+}
+
+.grupoAtd {
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.dadosReqAtd {
+    width: 900px;
+    text-align: justify;
+    color: black;
+    font: normal bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.dadosReqAtd div {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.tabelaAtd {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 250px;
+    text-align: center;
+    justify-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+}
+
+
+div#tituloAtd {
+    font-size: 18pt;
+    color: white;
+    background-color: #20B2AA;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cabecalhoAtd {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 10px 0;
+    border-bottom: solid 1px #20B2AA;
+    justify-content: normal;
+}
+
+.cabecalhoAtd div {
+    width: 120px;
+    font-size: 13pt;
+}
+
+.tableAtd {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.infoAtd {
+    display: block;
+    overflow-x: hidden;
+    font-size: 10pt;
+    height: 100px;
+    border-collapse: collapse;
+}
+
+.infoAtd td {
+    width: 200px;
+    border-bottom: solid 1px #20B2AA;
+}
+
+.atendimento {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 50px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.cabecalhoReqAtd {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divItemAtd {
+    width: 100%;
+}
+
+.matriculaReqAtd {
+    width: 40px;
+    margin-right: 210px;
+}
+
+.nameReqAtd {
+    width: 500px;
+}
+
+.justificativaReqAtd {
+    width: 800px;
+}
+
+.divItemAtd {
+    align-items: center;
+}
+
+.codReqAtd {
+    width: 40px;
+}
+
+.itemReqAtd {
+    width: 250px;
+}
+
+.qtdReq {
+    width: 40px;
+}
+
+.qtdEstAtd{
+    width: 40px;
+}
+.umReqAtd {
+    width: 40px;
+}
+
+.qtdReqAtd {
+    width: 40px;
+}
+
+.labelLarge {
+    margin-left: 400px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*ESTOQUE*/
+
+.infoEstoqueGeral {
+    position: relative;
+    top: 0;
+    left: 200px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 10px 0 0 50px;
+}
+
+.grupoEst {
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.tabelaEstoque {
+    position: relative;
+    top: 0;
+    left: 200px;
+    width: 1000px;
+    height: 500px;
+    text-align: center;
+    justify-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+}
+
+
+div#tituloEstoque {
+    font-size: 18pt;
+    color: white;
+    background-color: #20B2AA;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cabecalhoEstoque {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 10px 0;
+    border-bottom: solid 1px #20B2AA;
+    justify-content: normal;
+}
+
+.cabecalhoEstoque div {
+    width: 250px;
+    font-size: 15pt;
+}
+
+.tableEstoque {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.infoEstoque {
+    display: block;
+    overflow: auto;
+    font-size: 13pt;
+    height: 350px;
+    border-collapse: collapse;
+}
+
+.infoEstoque td {
+    width: 250px;
+    border-bottom: solid 1px #20B2AA;
+}
+
+
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*Permissões*/
+
+.infoPermissaoGeral {
+    position: relative;
+    top: 0;
+    left: 200px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 10px 0 0 50px;
+
+}
+
+.grupoPermissao {
+    width: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.26);
+}
+
+.formUser {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: center;
+}
+
+.formDadosUser {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formDadosUser input {
+    width: 200px;
+    height: 19px;
+    padding: 0;
+    text-align: center;
+    border-width: 0px;
+    border-bottom: solid 1px #ccc;
+}
+
+.formDadosUser select {
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    border-width: 0px;
+    border-bottom: solid 1px #ccc;
+}
+
+.dadosAdmin {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.dadosAdmin input {
+    border: none;
+    border-bottom: solid 1px #ccc;
+    margin-right: 10px;
+}
+
+.userPermissao {
+    display: flex;
+    padding: 5px 0;
+}
+
+.cabecalhotableUser {
+    display: flex;
+    flex-direction: row;
+}
+
+.cabecalhotableUser div {
+    width: 200px;
+    text-align: center;
+}
+
+
+.btnPermissao {
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background: #20B2AA;
+    transition: ease 0.5s;
+}
+
+.btnPermissao:hover {
+    background: #2ec0b9;
+}

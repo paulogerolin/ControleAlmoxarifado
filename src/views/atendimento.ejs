@@ -1,0 +1,58 @@
+<%- include('./includes/headers.ejs'); %>
+
+    <%- include('./includes/menu.ejs'); %>
+
+        <div class="infoAtdGeral">
+            <h1><strong>Atendimento<br></strong></h1>
+            <div class="grupoAtd">
+                <div class="tabelaAtd">
+                    <div id="tituloAtd"><strong>Atendimento</strong></div>
+                    <div class="cabecalhoAtd">
+                        <div><strong>Nº Requisição</strong></div>
+                        <div><strong>Status</strong></div>
+                        <div><strong>Cadastro</strong></div>
+                        <div><strong>Requisitante</strong></div>
+                    </div>
+                    <table class="tableAtd">
+                        <tbody class="infoAtd"></tbody>
+                    </table>
+                    <select name="selectAtd" id="selectAtd">
+                        <option value="1">Nº Requisição</option>
+                        <option value="3">Status</option>
+                        <option value="5">Cadatro</option>
+                        <option value="7">Requisitante</option>
+                    </select>
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" name="buscaEstoque" id="buscaEstoque" class="busca" placeholder="Busque aqui..." onkeyup="searchAtd(this.value)">
+                </div>
+                <form action="/atendimento/<%=id%>/reqAtendida" method="post" class="atendimento">
+                    <% if(erros.length> 0 ) {%>
+                        <div class="erros">
+                            <% for( var i of erros) {%>
+                                <%=i%><br>
+                                    <% } %>
+                        </div>
+                        <% }%>
+                            <% if(sucess.length> 0 ) {%>
+                                <div class="sucess">
+                                    <% for( var i of sucess) {%>
+                                        <%=i%><br>
+                                            <% } %>
+                                </div>
+                                <% } %>
+                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                    <div class="dadosReqAtd"></div>
+
+
+                                    <div class="hide">
+                                        <a href="/atendimento/<%=id%>">Novo Atendimento</a>
+                                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="/assets/js/bundle.js"></script>
+        <script src="/assets/js/atendimento.js"></script>
+        <script src="/assets/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

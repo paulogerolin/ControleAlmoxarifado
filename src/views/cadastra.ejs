@@ -1,0 +1,96 @@
+<%- include('./includes/headers.ejs'); %>
+
+    <%- include('./includes/menu.ejs'); %>
+        <div class="fundoCadastro">
+            <form action="/cadastra/<%=id%>" method="post" id="cadastra">
+
+                <h2>Cadastro</h2>
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+
+                <%- include('./includes/message.ejs'); %>
+
+                    <div class="info">
+                        <label for="nomeCad">Nome: </label>
+                        <input type="text" name="nomeCad" id="nomeCad" class="size0">
+                    </div>
+
+                    <div class="info">
+                        <label for="cpfCad">CPF: </label>
+                        <input type="text" name="cpfCad" id="cpfCad" class="size3" minlength="14" maxlength="14"
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+
+
+                        <label for="emailCad">Email: </label>
+                        <input type="text" name="emailCad" id="emailCad" class="size4">
+
+                    </div>
+
+                    <div class="info">
+                        <label for="senha">Senha: </label>
+                        <input type="password" name="senhaCad" id="senhaCad" class="size3">
+                        <label for="chksenhaCad">Confirme sua senha: </label>
+                        <input type="password" name="chksenhaCad" id="chksenhaCad" class="size3">
+                    </div>
+
+                    <div class="info">
+                        <div class="erroSenha">
+                            <div id="erroSenhaQtn">Sua senha deverá conter mais de 6(seis) dígitos.</div>
+                            <div id="erroSenhaSim">Sua senha deverá conter pelo menos 1(um) símbolo
+                                (!@#$%&*(){}{}-_).</div>
+                            <div id="erroSenhaNum">Sua senha deverá conter pelo menos 1(um) número.</div>
+                        </div>
+                    </div>
+
+
+                    <div class="info">
+                        <div class="nascimento">
+                            <label for="data">Data de nascimento:</label>
+                            <input type="text" name="diaCad" id="diaCad" class="size5"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                                maxlength="2" minlength="2">
+
+                            <label>/</label>
+
+                            <input type="text" name="mesCad" id="mesCad" class="size5"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                                maxlength="2" minlength="2">
+
+                            <label>/</label>
+
+                            <input type="text" name="anoCad" id="anoCad" class="size5"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                                maxlength="4" minlength="4">
+                        </div>
+
+                        <label for="cep">CEP: </label>
+                        <input type="text" name="cepCad" id="cepCad" class="size2">
+                    </div>
+
+
+                    <div class="afterInfo">
+                        <div class="divHidden">
+                            <label for="endereco">Endereço: </label>
+                            <input type="text" name="enderecoCad" id="enderecoCad" class="size4">
+                            <label for="num">Nº: </label>
+                            <input type="text" name="numCad" id="numCad" class="size2"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                        </div>
+                        <div class="divHidden2">
+                            <label for="bairro">Bairro: </label>
+                            <input type="text" name="bairroCad" id="bairroCad" class="size3">
+                            <label for="cidade">Cidade: </label>
+                            <input type="text" name="cidadeCad" id="cidadeCad" class="size1">
+                            <label for="uf">UF: </label>
+                            <input type="text" name="ufCad" id="ufCad" class="size2">
+                        </div>
+                    </div>
+                    <input type="submit" value="Cadastrar" id="go">
+            </form>
+        </div>
+
+        <script src="/assets/js/bundle.js"></script>
+        <script src="/assets/js/cadastra.js"></script>
+        <script src="/assets/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

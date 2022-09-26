@@ -1,0 +1,56 @@
+<%- include('./includes/headers.ejs'); %>
+
+    <%- include('./includes/menu.ejs'); %>
+
+        <div class="infoAddItemGeral">
+            <h1><strong>Adicionar Novo Item<br></strong></h1>
+            <div class="grupoAddItem">
+                    <h3>Adicionar Item</h3>
+                    <form action="/item/<%=id%>" method="post">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <% if(erros.length> 0 ) {%>
+                            <div class="erros">
+                                <% for( var i of erros) {%>
+                                    <%=i%><br>
+                                        <% } %>
+                            </div>
+                            <% }%>
+                                <% if(sucess.length> 0 ) {%>
+                                    <div class="sucess">
+                                        <% for( var i of sucess) {%>
+                                            <%=i%><br>
+                                                <% } %>
+                                    </div>
+                                    <% } %>
+                                        <div>
+                                            <label for="addItemIn">Novo Item:</label>
+                                            <input type="text" name="addItemIn" id="addItemIn">
+                                        </div>
+                                        <div>
+                                            <label for="addItemUm">Unidade de Medida:</label>
+                                            <input type="text" name="addItemUm" id="addItemUm">
+                                        </div>
+                                        <input type="submit" value="Adicionar" class="btnAdd" id="subItem">
+                    </form>
+            </div>
+        </div>
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+
+        <!--input hiddens for errors--------------------------------->
+        <input type="hidden" id="cepCad">
+        <input type="hidden" id="cpfCad">
+        <input type="hidden" id="nomeCad">
+        <input type="hidden" id="emailCad">
+        <input type="hidden" id="senhaCad">
+        <input type="hidden" id="chksenhaCad">
+        <input type="hidden" id="diaCad">
+        <input type="hidden" id="mesCad">
+        <input type="hidden" id="anoCad">
+        <input type="hidden" id="numCad">
+        <!------------------------------------------------------------>
+
+        <script src="/assets/js/bundle.js"></script>
+        <script src="/assets/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

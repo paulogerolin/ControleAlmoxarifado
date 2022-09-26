@@ -1,0 +1,92 @@
+<%- include('./includes/headers.ejs'); %>
+
+    <%- include('./includes/menu.ejs'); %>
+
+        <div class="infoReqGeral">
+            <h1><strong>Requisisão<br></strong></h1>
+            <div class="grupoReq">
+                <div class="tabelaReq">
+                    <div id="tituloReq"><strong>Itens</strong></div>
+                    <div class="cabecalhoReq">
+                        <div><strong>Cód.</strong></div>
+                        <div><strong>Produtos</strong></div>
+                    </div>
+                    <table class="tableReq">
+                        <tbody class="infoReq"></tbody>
+                    </table>
+                    <select name="selectReq" id="selectReq">
+                        <option value="0">Código</option>
+                        <option value="1">Produto</option>
+                    </select>
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" name="buscaReq" id="buscaReq" class="buscaReq" placeholder="Busque aqui..."
+                        onkeyup="searchReq(this.value)">
+                </div>
+                <div class="requisicao">
+                    <h3>Nova Requisisão</h3>
+                    <form class="adiciona" action="/requisicao/<%=id%>" method="post">
+                        <% if(erros.length> 0 ) {%>
+                            <div class="erros">
+                                <% for( var i of erros) {%>
+                                    <%=i%><br>
+                                        <% } %>
+                            </div>
+                            <% }%>
+                                <% if(sucess.length> 0 ) {%>
+                                    <div class="sucess">
+                                        <% for( var i of sucess) {%>
+                                            <%=i%><br>
+                                                <% } %>
+                                    </div>
+                                    <% } %>
+                                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                        <div class="dadosReq">
+                                            <div>
+                                                <label for="matriculaReq">Matrícula: </label>
+                                                <input type="text" name="matriculaReq" id="matriculaReq" readonly
+                                                    value="<%=matricula%>">
+                                                <label for="nameReq">Nome: </label>
+                                                <input type="text" name="nameReq" id="nameReq" readonly
+                                                    value="<%=name%>">
+                                            </div>
+                                            <div>
+                                                <label for="justificativaReq">Justificativa: </label>
+                                                <input type="text" name="justificativaReq" id="justificativaReq"
+                                                    placeholder="ex: Uso no setor.">
+                                            </div>
+                                            <div class="item1">
+                                                <label for="item">Item: </label>
+                                                <input type="text" value="1" name="item" id="itemReq" readonly>
+                                                <label for="addCodigo">Código: </label>
+                                                <input type="text" name="addCodigo" id="addCodigoReq" readonly>
+                                                <label for="addProduto">Produto: </label>
+                                                <input type="text" name="addProduto" id="addProdutoReq" readonly
+                                                    placeholder="SELECIONE PELA LISTA DE ITENS">
+                                                <label for="addUm">Unidade de medida: </label>
+                                                <input type="text" name="addUm" id="addUmReq" readonly>
+                                                <label for="addQtd">Quantidade: </label>
+                                                <input type="text" name="addQtd" id="addQtdReq"
+                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '');"
+                                                    onkeyup="localStorage.setItem(`qtd0`, this.value)">
+
+                                            </div>
+                                        </div>
+                                        <div id="button">
+                                            <input type="button" value="Limpar tudo!" class="btnClear">
+                                            <input type="button" value="-Item" class="btnRmvItem">
+                                            <input type="button" value="+Item" class="btnAddItem">
+                                            <input type="submit" value="Gerar" class="btnLanca">
+                                        </div>
+                                        <div class="hide">
+                                            <a href="/requisicao/<%=id%>">Nova Requisição</a>
+                                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="/assets/js/bundle.js"></script>
+        <script src="/assets/js/requisicao.js"></script>
+        <script src="/assets/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

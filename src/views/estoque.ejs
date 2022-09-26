@@ -1,0 +1,36 @@
+<%- include('./includes/headers.ejs'); %>
+
+    <%- include('./includes/message.ejs'); %>
+
+        <%- include('./includes/menu.ejs'); %>
+
+            <div class="infoEstoqueGeral">
+                <h1><strong>Estoque<br></strong></h1>
+                <div class="grupoEst">
+                    <div class="tabelaEstoque">
+                        <div id="tituloEstoque"><strong>Estoque</strong></div>
+                        <div class="cabecalhoEstoque">
+                            <div><strong>Cód.</strong></div>
+                            <div><strong>Produto</strong></div>
+                            <div><strong>Quantidade</strong></div>
+                            <div><strong>Unidade de medida</strong></div>
+                        </div>
+                        <table class="tableEstoque">
+                            <tbody class="infoEstoque"></tbody>
+                        </table>
+                        <select name="selectEstoque" id="selectEstoque">
+                            <option value="1">Cód.</option>
+                            <option value="3">Produto</option>
+                        </select>
+                        <ion-icon name="search-outline"></ion-icon>
+                        <input type="text" name="buscaEstoque" id="buscaEstoque" class="busca"
+                            placeholder="Busque aqui..." onkeyup="searchEstoque(this.value)">
+                    </div>
+                </div>
+            </div>
+
+            <script src="/assets/js/bundle.js"></script>
+            <script src="/assets/js/estoque.js"></script>
+            <script src="/assets/js/menu.js"></script>
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

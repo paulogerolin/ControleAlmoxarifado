@@ -1,0 +1,57 @@
+<%- include('./includes/headers.ejs'); %>
+
+    <%- include('./includes/menu.ejs'); %>
+
+        <div class="infoPermissaoGeral">
+            <h1><strong>Permissões<br></strong></h1>
+            <div class="grupoPermissao">
+                <div class="cabecalhotableUser">
+                    <div><strong>Matricula</strong></div>
+                    <div><strong>Nome</strong></div>
+                    <div><strong>Email</strong></div>
+                    <div><strong>Requisitante</strong></div>
+                    <div><strong>Almoxarifado</strong></div>
+                    <div><strong>Admin Almoxarifado</strong></div>
+                </div>
+                <form method="post" action="/permissoes/<%=id%>" class="formUser">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+
+                    <div class="formDadosUser"></div>
+                    <% if(erros.length> 0 ) {%>
+                        <div class="erros">
+                            <% for( var i of erros) {%>
+                                <%=i%><br>
+                                    <% } %>
+                        </div>
+                        <% }%>
+                            <% if(sucess.length> 0 ) {%>
+                                <div class="sucess">
+                                    <% for( var i of sucess) {%>
+                                        <%=i%><br>
+                                            <% } %>
+                                </div>
+                                <% } %>
+                                    <div class="dadosAdmin">
+                                        <label for="matriculaAdmin">Matricula:</label>
+                                        <input type="text" name="matriculaAdmin" id="matriculaAdmin"
+                                            value="<%=matricula%>" readonly>
+                                        <label for="emailAdmin">Email:</label>
+                                        <input type="text" name="emailAdmin" id="emailAdmin" value="<%=email%>"
+                                            readonly>
+                                        <label for="senhaAdmin">Informe sua senha:</label>
+                                        <input type="password" name="senhaAdmin" id="senhaAdmin">
+                                    </div>
+
+                                    <input type="submit" value="Salvar" class="btnPermissao">
+
+                </form>
+            </div>
+        </div>
+
+
+        <script src="/assets/js/bundle.js"></script>
+        <script src="/assets/js/users.js"></script>
+        <script src="/assets/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

@@ -1,0 +1,16 @@
+<% if(locals.errors.length> 0) {%>
+    <div class="erros">
+        <% for(var errors of locals.errors) { %>
+            <%= errors %><br>
+                <% } %>
+    </div>
+    <% } %>
+
+
+        <% if(locals.sucess.length> 0) {%>
+            <div class="sucess">
+                <% for(var sucess of locals.sucess) { %>
+                    <%= sucess %><br>
+                        <% } %>
+            </div>
+            <% } %>

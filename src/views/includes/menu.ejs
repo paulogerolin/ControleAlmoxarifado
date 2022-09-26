@@ -1,0 +1,102 @@
+<div class="conteudo">
+    <div class="menuGlobal">
+        <ul>
+            <li>
+                <b></b>
+                <b></b>
+                <a class="menuLink" href="/home/<%=id%>">
+                    <ion-icon name="home-outline" class="icons"></ion-icon>
+                    <span class="title"><strong>Home</strong></span>
+                </a>
+            </li>
+
+            <% if (isAdmAlmox===true) {%>
+                <li>
+                    <b></b>
+                    <b></b>
+                    <a class="menuLink" href="/item/<%=id%>">
+                        <ion-icon name="add-outline" class="icons"></ion-icon>
+                        <span class="title"><strong>Adicionar Item</strong></span>
+                    </a>
+                </li>
+                <% } %>
+
+                    <% if (isAlmox===true || isAdmAlmox===true) {%>
+                        <li>
+                            <b></b>
+                            <b></b>
+                            <a class="menuLink" href="/atendimento/<%=id%>">
+                                <ion-icon name="bar-chart-outline" class="icons"></ion-icon>
+                                <span class="title"><strong>Atendimento</strong></span>
+                            </a>
+                        </li>
+                        <% } %>
+
+                            <% if (isAlmox===true || isAdmAlmox===true) {%>
+                                <li>
+                                    <b></b>
+                                    <b></b>
+                                    <a class="menuLink" href="/estoque/<%=id%>">
+                                        <ion-icon name="server-outline" class="icons"></ion-icon>
+                                        <span class="title"><strong>Estoque</strong></span>
+                                    </a>
+                                </li>
+                                <% } %>
+
+                                    <% if (isAlmox===true || isAdmAlmox===true) {%>
+                                        <li>
+                                            <b></b>
+                                            <b></b>
+                                            <a class="menuLink" href="/lancamento/<%=id%>">
+                                                <ion-icon name="git-branch-outline" class="icons"></ion-icon>
+                                                <span class="title"><strong>Lançamento</strong></span>
+                                            </a>
+                                        </li>
+                                        <% } %>
+
+                                            <% if (isRequisitante===true) {%>
+                                                <li>
+                                                    <b></b>
+                                                    <b></b>
+                                                    <a class="menuLink" href="/requisicao/<%=id%>">
+                                                        <ion-icon name="git-pull-request-outline" class="icons">
+                                                        </ion-icon>
+                                                        <span class="title"><strong>Requisição</strong></span>
+                                                    </a>
+                                                </li>
+                                                <% } %>
+
+                                                    <% if (superPowers===true) {%>
+
+                                                        <li>
+                                                            <b></b>
+                                                            <b></b>
+                                                            <a class="menuLink" href="/cadastra/<%=id%>">
+                                                                <ion-icon name="person-add-outline" class="icons">
+                                                                </ion-icon>
+                                                                <span class="title"><strong>New Usuário</strong></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <b></b>
+                                                            <b></b>
+                                                            <a class="menuLink" href="/permissoes/<%=id%>">
+                                                                <ion-icon name="key-outline" class="icons">
+                                                                </ion-icon>
+                                                                <span class="title"><strong>Permissões</strong></span>
+                                                            </a>
+                                                        </li>
+                                                        <% } %>
+
+                                                            <li>
+                                                                <b></b>
+                                                                <b></b>
+                                                                <a class="menuLink" href="/logout">
+                                                                    <ion-icon name="log-out-outline" class="icons">
+                                                                    </ion-icon>
+                                                                    <span class="title"><strong>LogOut</strong></span>
+                                                                </a>
+                                                            </li>
+        </ul>
+    </div>
+</div>

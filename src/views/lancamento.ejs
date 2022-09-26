@@ -1,0 +1,114 @@
+<%- include('./includes/headers.ejs'); %>
+
+    <%- include('./includes/menu.ejs'); %>
+
+        <div class="infoLanGeral">
+            <h1><strong>Lançamento<br></strong></h1>
+            <div class="grupoLan">
+                <div class="tabelaLancamento">
+                    <div id="tituloLancamento"><strong>Itens</strong></div>
+                    <div class="cabecalho">
+                        <div><strong>Cód.</strong></div>
+                        <div><strong>Produtos</strong></div>
+                    </div>
+                    <table class="tableLancamento">
+                        <tbody class="infoLancamento"></tbody>
+                    </table>
+                    <select name="selectLancamento" id="selectLancamento">
+                        <option value="0">Código</option>
+                        <option value="1">Produto</option>
+                    </select>
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" name="buscaLancamento" id="buscaLancamento" class="buscaLancamento"
+                        placeholder="Busque aqui..." onkeyup="searchLancamento(this.value)">
+                </div>
+                <div class="lancamento">
+                    <h3>Novo Lançamento</h3>
+                    <form class="adiciona" action="/lancamento/<%=id%>/?_csrf=<%=csrfToken%>" method="post"
+                        enctype="multipart/form-data">
+                        <% if(erros.length> 0 ) {%>
+                            <div class="erros">
+                                <% for( var i of erros) {%>
+                                    <%=i%><br>
+                                        <% } %>
+                            </div>
+                            <% }%>
+                                <% if(sucess.length> 0 ) {%>
+                                    <div class="sucess">
+                                        <% for( var i of sucess) {%>
+                                            <%=i%><br>
+                                                <% } %>
+                                    </div>
+                                    <% }%>
+                                        <!--<input type="hidden" name="_csrf" value="<%= csrfToken %>">-->
+                                        <div class="dadosAdd">
+                                            <p>Se o item a ser lançado não se encontra lista, entre em contato com a
+                                                gestão para que o mesmo seja adicionado.</p>
+                                            <div class="tips">*Somente números.</div>
+                                            <div>
+                                                <label for="matriculaReq">Matrícula: </label>
+                                                <input type="text" name="matriculaReq" id="matriculaReq" readonly
+                                                    value="<%=matricula%>">
+                                                <label for="nameReq">Nome: </label>
+                                                <input type="text" name="nameReq" id="nameReq" readonly
+                                                    value="<%=name%>">
+                                            </div>
+                                            <div class="cabecalhoNfeLan">
+                                                <label for="addFornecedor">Nfe: </label>
+                                                <input type="text" name="nfe" id="nfe" placeholder="ex:240">
+                                                <label for="anoNfe">Ano Nfe: </label>
+                                                <input type="text" name="anoNfe" id="anoNfe" placeholder="ex:2022">
+                                                <label for="addFornecedor">Fornecedor*: </label>
+                                                <input type="text" name="addFornecedor" id="addFornecedor">
+                                                <label for="addFornecedor">CNPJ*: </label>
+                                                <input type="text" name="addCnpj" id="addCnpj"
+                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '')">
+                                            </div>
+                                            <div class="item1">
+                                                <label for="item">Item: </label>
+                                                <input type="text" value="1" name="item" id="itemLan" readonly>
+                                            </div>
+                                            <div class="item1">
+                                                <label for="addCodigo">Código: </label>
+                                                <input type="text" name="addCodigo" id="addCodigo" readonly>
+                                                <label for="addProduto">Produto: </label>
+                                                <input type="text" name="addProduto" id="addProduto" readonly
+                                                    placeholder="SELECIONE PELA LISTA DE ITENS">
+                                                    <label for="addUm">Unidade de medida: </label>
+                                                <input type="text" name="addUm" id="addUm" readonly>
+                                                    <label for="addQtd">Quantidade*: </label>
+                                                <input type="text" name="addQtd" id="addQtd"
+                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '');"
+                                                    onkeyup="localStorage.setItem(`qtd0`, this.value)">
+                                                <label for="addValor">Valor*: R$</label>
+                                                <input type="text" name="addValor" id="addValor"
+                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '');"
+                                                    placeholder="0,00"
+                                                    onkeyup="localStorage.setItem(`valor0`, this.value), comma(this.value, 0)">
+                                            </div>
+                                        </div>
+                                        <div class="insertPDF">
+                                            <label for="filePDF">Arquivo PDF da nota:</label>
+                                            <input type="file" name="filePDF" id="filePDF" accept=".pdf">
+                                        </div>
+                                        <div id="button">
+                                            <input type="button" value="Limpar tudo!" class="btnClear">
+                                            <input type="button" value="-Item" class="btnRmvItem">
+                                            <input type="button" value="+Item" class="btnAddItem">
+                                            <input type="submit" value="Lançar" class="btnLanca">
+                                        </div>
+                                        <div class="hide">
+                                            <a href="/lancamento/<%=id%>">Novo Lançamento</a>
+                                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="/assets/js/bundle.js"></script>
+        <script src="/assets/js/lancamento.js"></script>
+        <script src="/assets/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
