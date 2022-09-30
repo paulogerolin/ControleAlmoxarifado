@@ -9,7 +9,7 @@ const path = require('path');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
-//const helmet = require('helmet');
+const helmet = require('helmet');
 const csrf = require('csurf');
 const cookieParser = require('cookie-parser');
 
@@ -36,7 +36,7 @@ app.use(cookieParser());
 app.use(csrf({ cookie: true }));
 app.use(middleware.checkCsrf);
 app.use(middleware.csrf);
-//app.use(helmet());
+app.use(helmet());
 
 //Configuração EJS
 app.set('views', path.resolve(__dirname, 'src', 'views'))
