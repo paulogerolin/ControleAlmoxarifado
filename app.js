@@ -21,7 +21,6 @@ const middleware = require('./src/middleware/middlewares');
 //Conexão MongoDB
 mongoose.connect(process.env.connectDB, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        console.log('Conectei no DB');
         app.emit('Ready');
     })
     .catch(e => console.log(e));
@@ -36,7 +35,14 @@ app.use(cookieParser());
 app.use(csrf({ cookie: true }));
 app.use(middleware.checkCsrf);
 app.use(middleware.csrf);
-app.use(helmet());
+app.use(
+    helmet.contentSecurityPolicy({
+        directives:{
+            "default-src": ["'self'", 'https://unpkg.com/'],
+            "script-src": ["'self'", 'https://unpkg.com/']
+        }
+    })
+);
 
 //Configuração EJS
 app.set('views', path.resolve(__dirname, 'src', 'views'))
@@ -63,4 +69,4 @@ app.use(routes);
 
 //Conexão PORT - Server Listen
 const PORT = process.env.PORT || 3000;
-app.on('Ready', () => { app.listen(PORT, () => console.log(`Connected on ${PORT}`)); })
+app.on('Ready', () => { app.listen(PORT)})

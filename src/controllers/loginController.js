@@ -32,5 +32,8 @@ exports.login = async (req, res) => {
 }
 
 exports.logout = async (req, res) => {
-    res.cookie('access_token', 'logout').redirect('/');
+    res.clearCookie('access_token', {
+        sameSite:"none",
+        secure:true
+    }).redirect('/');
 }
