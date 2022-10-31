@@ -1,10 +1,10 @@
 //Relogio
 function getTime() {
-    var time = new Date();
-    var horas = time.getHours();
-    var minutos = time.getMinutes();
-    var segundos = time.getSeconds();
-    var txttime = document.getElementById('relogio')
+    const time = new Date();
+    const horas = time.getHours();
+    const minutos = time.getMinutes();
+    const segundos = time.getSeconds();
+    const txttime = document.getElementById('relogio')
 
     if (horas < 10) {
         horas = `0${horas}`

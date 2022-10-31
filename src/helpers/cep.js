@@ -8,16 +8,16 @@ if (cep) {
     })
 
     async function getCEP(numCep) {
-        var txtEnd = document.getElementById('enderecoCad');
-        var txtBairro = document.getElementById('bairroCad');
-        var txtCid = document.getElementById('cidadeCad');
-        var txtEst = document.getElementById('ufCad');
-        var afterInfo = document.querySelector('.afterInfo')
-        var divHidden = document.querySelector('.divHidden')
-        var divHidden2 = document.querySelector('.divHidden2')
-        var urlViaCep = `http://viacep.com.br/ws/${numCep}/json`;
-        var fetchCep = await fetch(urlViaCep);
-        var resCep = await fetchCep.json();
+        const txtEnd = document.getElementById('enderecoCad');
+        const txtBairro = document.getElementById('bairroCad');
+        const txtCid = document.getElementById('cidadeCad');
+        const txtEst = document.getElementById('ufCad');
+        const afterInfo = document.querySelector('.afterInfo')
+        const divHidden = document.querySelector('.divHidden')
+        const divHidden2 = document.querySelector('.divHidden2')
+        const urlViaCep = `http://viacep.com.br/ws/${numCep}/json`;
+        const fetchCep = await fetch(urlViaCep);
+        const resCep = await fetchCep.json();
         if (resCep) {
             afterInfo.style.display = 'flex'
             afterInfo.style.flexDirection = 'column'
