@@ -14,7 +14,7 @@ getCoords();
 
 //Cidade-Clima
 async function getClima(latitude, longitude) {
-    const token = '583fdcd20c0a58e72c82cb974a898b89'
+    const token = process.env.OPENWHEATER
     const urltempo = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${token}`
     const fetchTempo = await fetch(urltempo);
     const resTempo = await fetchTempo.json();
