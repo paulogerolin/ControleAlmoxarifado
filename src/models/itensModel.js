@@ -16,6 +16,7 @@ class Item {
 
     async register() {
         this.lista = await itemModel.find();
+
         for (var i of this.lista) {
             if (this.body.addItemIn == i.nome) return this.iErrors.push('Produto já cadastrado!')
         }
@@ -31,7 +32,7 @@ class Item {
                 while (max <= i.id) max++;
             }
         }
-        
+
         this.body = {
             nome: nome,
             unidade: unidade,

@@ -14,6 +14,7 @@ exports.auth = (req, res, next) => {
             if (err) {
                 return res.status(403).redirect('/');//'Invalid Token'
             }
+
             const { id, email, name, isRequisitante, isAlmox, isPat, isAdmAlmox, isAdmPat, superPowers, matricula } = user;
             req.userId = id;
             req.userEmail = email;
@@ -25,7 +26,7 @@ exports.auth = (req, res, next) => {
             req.userIsAdmPat = isAdmPat;
             req.userSuperPowers = superPowers;
             req.userMatricula = matricula;
-            //if(req.params.id == req.userId) console.log('verify')
+
             next();
         });
     } catch {

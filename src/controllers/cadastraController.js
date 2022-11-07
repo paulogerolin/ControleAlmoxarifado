@@ -1,5 +1,6 @@
 const User = require('../models/usersModel');
 
+
 exports.cadastra = async (req, res) => {
     if (req.userSuperPowers === true) {
         res.render('cadastra', {

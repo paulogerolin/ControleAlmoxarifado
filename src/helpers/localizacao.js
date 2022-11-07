@@ -7,14 +7,14 @@ async function getCoords() {
             return getClima(latitude, longitude);
         })
     } else {
-        alert('Geolocalização não está disponível')
+        alert('Geolocalização não está disponível');
     }
 }
 getCoords();
 
 //Cidade-Clima
 async function getClima(latitude, longitude) {
-    const token = process.env.OPENWHEATER
+    const token = process.env.OPENWHEATER;
     const urltempo = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${token}`
     const fetchTempo = await fetch(urltempo);
     const resTempo = await fetchTempo.json();

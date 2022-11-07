@@ -4,19 +4,19 @@ function getTime() {
     const horas = time.getHours();
     const minutos = time.getMinutes();
     const segundos = time.getSeconds();
-    const txttime = document.getElementById('relogio')
+    const txttime = document.getElementById('relogio');
 
     if (horas < 10) {
-        horas = `0${horas}`
+        horas = `0${horas}`;
     }
     if (minutos < 10) {
-        minutos = `0${minutos}`
+        minutos = `0${minutos}`;
     }
     if (segundos < 10) {
-        segundos = `0${segundos}`
+        segundos = `0${segundos}`;
     }
 
-    txttime.innerHTML = `${horas}:${minutos}:${segundos}`
+    txttime.innerHTML = `${horas}:${minutos}:${segundos}`;
 
 }
 

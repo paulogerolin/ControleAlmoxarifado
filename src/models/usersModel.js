@@ -28,7 +28,7 @@ const userSchema = new mongoose.Schema({
 const usersModel = mongoose.model('users', userSchema)
 
 class User {
-    //CRIAÇÃO E VALIDAÇÃO DO USUÁRIO/////////////////////////////////// 
+    //CRIAÇÃO E VALIDAÇÃO DO USUÁRIO///////////////////////////////////
     constructor(body) {
         this.body = body;
         this.errors = [];
@@ -67,7 +67,7 @@ class User {
             this.errors.push('Email inválido!');
         }
 
-        //SENHA//////////////////////////
+        //SENHA/////////////////////////
         if (this.body.senha.length < 6) this.errors.push('Seu senha deverá ter pelo menos 6(seis) dígitos.');
         this.validaSenhaSimb();
         this.validaSenhaNum();

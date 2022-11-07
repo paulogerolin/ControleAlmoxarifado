@@ -48,6 +48,7 @@ exports.alteraPermissoes = async (req, res) => {
     if (req.userSuperPowers === true) {
         const user = new User(req.body);
         await user.verifyPassword();
+        
         if (user.errors.length > 0) {
             const msg = [...user.errors]
             return res.render('permissoes', {

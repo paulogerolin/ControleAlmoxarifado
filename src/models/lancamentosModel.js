@@ -18,7 +18,7 @@ const lancamentoSchema = new mongoose.Schema({
 const lancamentoModel = mongoose.model('Lançamento', lancamentoSchema);
 
 class Lancamento {
-    //LANÇAMENTO DE NFS//////////////
+    //LANÇAMENTO DE NFS/////////////
     constructor(body) {
         this.body = body;
         this.lanErrors = [];

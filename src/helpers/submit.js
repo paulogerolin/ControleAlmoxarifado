@@ -1,67 +1,67 @@
-var nome = document.getElementById('nomeCad');
+const nome = document.getElementById('nomeCad');
 if (nome) {
     nome.addEventListener('keyup', () => {
         localStorage.setItem('nome', nomeCad.value);
     });
 }
 
-var cpf = document.getElementById('cpfCad');
+const cpf = document.getElementById('cpfCad');
 if (cpf) {
     cpf.addEventListener('keyup', () => {
         localStorage.setItem('cpf', cpf.value);
     });
 }
 
-var email = document.getElementById('emailCad');
+const email = document.getElementById('emailCad');
 if (email) {
     email.addEventListener('keyup', () => {
         localStorage.setItem('email', email.value);
     });
 };
 
-var senha = document.getElementById('senhaCad');
+const senha = document.getElementById('senhaCad');
 if (senha) {
     senha.addEventListener('keyup', () => {
         localStorage.setItem('senha', senha.value);
     });
 };
 
-var chksenha = document.getElementById('chksenhaCad');
+const chksenha = document.getElementById('chksenhaCad');
 if (chksenha) {
     chksenha.addEventListener('keyup', () => {
         localStorage.setItem('chksenha', chksenha.value);
     });
 };
 
-var dia = document.getElementById('diaCad');
+const dia = document.getElementById('diaCad');
 if (dia) {
     dia.addEventListener('keyup', () => {
         localStorage.setItem('dia', dia.value);
     });
 };
 
-var mes = document.getElementById('mesCad');
+const mes = document.getElementById('mesCad');
 if (mes) {
     mes.addEventListener('keyup', () => {
         localStorage.setItem('mes', mes.value);
     });
 };
 
-var ano = document.getElementById('anoCad');
+const ano = document.getElementById('anoCad');
 if (ano) {
     ano.addEventListener('keyup', () => {
         localStorage.setItem('ano', ano.value);
     });
 };
 
-var cep = document.getElementById('cepCad');
+const cep = document.getElementById('cepCad');
 if (cep) {
     cep.addEventListener('keyup', () => {
         localStorage.setItem('cep', cep.value);
     });
 };
 
-var num = document.getElementById('numCad');
+const num = document.getElementById('numCad');
 if (num) {
     num.addEventListener('keyup', () => {
         localStorage.setItem('num', num.value);

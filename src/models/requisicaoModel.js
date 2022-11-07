@@ -69,8 +69,6 @@ class Requisicao {
         }
     }
 
-
-
     checkBody() {
         if (!this.item.justificativa) this.reqErrors.push('Acrescente uma justificativa!')
         if (!this.item.produto) this.reqErrors.push('Informe o produto para o cadastro!');

@@ -1,5 +1,5 @@
 const multer = require('multer');
-const { extname, resolve } = require('path')
+const { extname, resolve } = require('path');
 
 module.exports = {
     storage: multer.diskStorage({

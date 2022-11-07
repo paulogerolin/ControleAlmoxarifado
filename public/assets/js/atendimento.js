@@ -16,7 +16,7 @@ async function getLista() {
     begin(numReq, data);
 }
 
-//INICIA////////////////////////////////////////////////////////
+//INICIA///////////////////////////////////////////////////////
 
 function begin(numReq, data) {
     var listaStorage = localStorage.getItem('listaRequisicoes');

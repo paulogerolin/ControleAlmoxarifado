@@ -12,9 +12,9 @@ if (cep) {
         const txtBairro = document.getElementById('bairroCad');
         const txtCid = document.getElementById('cidadeCad');
         const txtEst = document.getElementById('ufCad');
-        const afterInfo = document.querySelector('.afterInfo')
-        const divHidden = document.querySelector('.divHidden')
-        const divHidden2 = document.querySelector('.divHidden2')
+        const afterInfo = document.querySelector('.afterInfo');
+        const divHidden = document.querySelector('.divHidden');
+        const divHidden2 = document.querySelector('.divHidden2');
         const urlViaCep = `http://viacep.com.br/ws/${numCep}/json`;
         const fetchCep = await fetch(urlViaCep);
         const resCep = await fetchCep.json();

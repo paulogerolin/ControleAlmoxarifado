@@ -1,4 +1,5 @@
 var cpf = document.getElementById('cpfCad');
+
 if (cpf) {
     cpf.addEventListener('keyup', () => {
         if (cpf.value.length == 11) {

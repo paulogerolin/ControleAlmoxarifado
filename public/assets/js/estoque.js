@@ -12,7 +12,7 @@ async function getLista() {
     montaTabelaEstoque(data);
 }
 
-//INICIA////////////////////////////////////////////////////////
+//INICIA///////////////////////////////////////////////////////
 
 function montaTabelaEstoque(db) {
     var tbodyEst = document.querySelector('.infoEstoque');

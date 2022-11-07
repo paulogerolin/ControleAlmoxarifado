@@ -6,6 +6,7 @@ exports.index = (req, res) => {
     if (authorizarion == 'logout') return res.render('index', { email: '', id: null });
 
     const [texto, token] = authorizarion.split(' ');
+    
     try {
         jwt.verify(token, process.env.SECRET_KEY, (err, user) => {
             const { email } = user;

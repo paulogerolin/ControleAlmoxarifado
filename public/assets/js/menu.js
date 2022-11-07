@@ -9,6 +9,7 @@ class Menu {
         this.menu = menu
         this.pag = pag
     }
+    
     go(li) {
         if (i.textContent.toLowerCase().trim() == 'lançamento') var stringClear = 'lancamento'
         if (i.textContent.toLowerCase().trim() == 'adicionar item') var stringClear = 'item'

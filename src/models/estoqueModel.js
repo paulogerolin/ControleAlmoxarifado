@@ -27,6 +27,7 @@ class Estoque {
                     }
                 }
             }
+
             if (this.reqAtendidas.length > 0) {
                 for (var reqAtd of this.reqAtendidas) {
                     if (item.id == reqAtd.cod) {

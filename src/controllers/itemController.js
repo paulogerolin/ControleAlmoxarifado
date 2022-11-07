@@ -36,6 +36,7 @@ exports.render = (req, res) => {
 
 exports.lista = async (req, res) => {
     if (req.userIsAlmox === true || req.userIsAdmAlmox === true || req.userSuperPowers === true) {
+
         try {
             const item = new Item();
             await item.search();
@@ -43,6 +44,7 @@ exports.lista = async (req, res) => {
         } catch (err) {
             console.log(err);
         }
+        
     } else {
         res.status(401).json('Usuário não possui autorização.');
     }

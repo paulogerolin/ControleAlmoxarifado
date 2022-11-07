@@ -2,7 +2,7 @@ const express = require('express');
 const route = express.Router();
 
 const multer = require('multer');
-const multerConfig = require('./src/configs/multerConfig')
+const multerConfig = require('./src/configs/multerConfig');
 
 const indexController = require('./src/controllers/indexController')
 const homeController = require('./src/controllers/homeController');

@@ -3,9 +3,6 @@ const RequisicaoAtd = require('../models/requisicaoAtdModel');
 const Item = require('../models/itensModel');
 const Estoque = require('../models/estoqueModel');
 
-
-
-
 exports.render = (req, res) => {
     if (req.userIsAlmox === true || req.userIsAdmAlmox === true || req.userSuperPowers === true) {
         res.render('lancamento', {

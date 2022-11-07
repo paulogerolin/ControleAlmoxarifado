@@ -1,5 +1,5 @@
 const Lancamento = require('../models/lancamentosModel');
-const RequisicaoAtd = require('../models/requisicaoAtdModel')
+const RequisicaoAtd = require('../models/requisicaoAtdModel');
 const Item = require('../models/itensModel');
 const Estoque = require('../models/estoqueModel');
 

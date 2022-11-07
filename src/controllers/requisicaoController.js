@@ -1,4 +1,4 @@
-const Requisicao = require('../models/requisicaoModel')
+const Requisicao = require('../models/requisicaoModel');
 
 exports.render = (req, res) => {
     if (req.userIsAlmox === true || req.userIsAdmAlmox === true || req.userSuperPowers === true) {

@@ -28,7 +28,7 @@ class RequisicaoAtd {
         } else {
             num = this.body.codReqAtd.length;
         }
-        
+
         if (num > 1) {
             for (var cont = 0; cont < num; cont++) {
                 this.item = {
@@ -75,8 +75,6 @@ class RequisicaoAtd {
             };
         }
     }
-
-
 
     checkBody(cont) {
         if (!this.item.qtdAtd) this.reqAtdErrors.push('Informe a quantidade do produto!');

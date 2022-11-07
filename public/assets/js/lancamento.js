@@ -13,7 +13,7 @@ async function getLista() {
     begin(cod, data);
 }
 
-//INICIA////////////////////////////////////////////////////////
+//INICIA///////////////////////////////////////////////////////
 
 function begin(cod, data) {
     var listaStorage = localStorage.getItem('listaLan');
